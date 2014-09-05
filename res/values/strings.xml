@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Arena</string>
+    <string name="join_league">참가 신청</string>
+    <string name="login">로그인</string>
+
+</resources>

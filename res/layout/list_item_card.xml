@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:descendantFocusability="beforeDescendants">
+
+    <RelativeLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:background="@drawable/selector_card_background"
+            android:descendantFocusability="afterDescendants">
+
+        <ImageView android:id="@+id/bitmap"
+                   android:layout_width="fill_parent"
+                   android:layout_height="200dp"
+                   android:layout_gravity="center"
+                   android:layout_alignParentTop="true" />
+        <TextView
+                android:id="@+id/league_name"
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:background="@drawable/league_title"
+                android:layout_alignBottom="@+id/bitmap" android:layout_alignLeft="@+id/bitmap"
+                android:layout_alignStart="@+id/bitmap"/>
+
+        <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/how_many_join"
+                android:layout_below="@+id/bitmap"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-7dp"
+                android:max="100"/>
+
+        <TextView
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:id="@+id/d_day"
+                android:gravity="center"
+                android:background="@drawable/d_day_shape"
+                android:textColor="@android:color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="172dp"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_level"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/d_day"
+                android:layout_alignParentRight="true"
+                />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_marginLeft="10dp"
+                  android:id="@+id/joined_user"
+                  android:layout_below="@+id/d_day"
+                  android:layout_alignParentLeft="true"
+                />
+
+    </RelativeLayout>
+</FrameLayout>

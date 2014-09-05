@@ -1,0 +1,122 @@
+
+
+//        lposter = (ImageView)findViewById(R.id.leauge_poster);
+//        lid = (TextView)findViewById(R.id.league_id);
+//        countdown = (TextView)findViewById(R.id.d_day);
+//
+//        lid.setText(get_league_info("name"));
+//        new DownloadImageTask(lposter)
+//                .execute("http://redbomba.net/media/poster/poster_redbomba.png");
+//        countdown.setText(d_day());
+
+
+
+//    private class DownloadFilesTask extends AsyncTask<URL, Integer, Long> {
+//        protected Long doInBackground(URL... urls) {
+//            int count = urls.length;
+//            long totalSize = 0;
+//            for (int i = 0; i < count; i++) {
+//                totalSize += Downloader.downloadFile(urls[i]);
+//                publishProgress((int) ((i / (float) count) * 100));
+//                // Escape early if cancel() is called
+//                if (isCancelled()) break;
+//            }
+//            return totalSize;
+//        }
+//
+//        protected void onProgressUpdate(Integer... progress) {
+//            setProgressPercent(progress[0]);
+//        }
+//
+//        protected void onPostExecute(Long result) {
+//            showDialog("Downloaded " + result + " bytes");
+//        }
+//    }
+
+//    public void getPoster() {
+////        Item it = new Item;
+//    }
+//
+//    public void showProgress() {
+//        Paint bar = new Paint(Paint.ANTI_ALIAS_FLAG);
+//        Canvas c = null;
+//        c.drawLine(0, 0, 10, 0, bar);
+//        bar.setColor(0x000000);
+//
+//    }
+//
+//    private void loadNoti(){
+//        llTable.removeAllViews();
+//        JSONArray ja = null;
+//        int i=0;
+//        try{
+//            ja = db.GET("mode=Notification&uid=" + db.user_id);
+//            int ja_len = ja.length();
+//            for(i=0;i<ja_len;i++){
+//                Log.i("con", ja.getJSONObject(i).getString("con"));
+//                Log.i("imgurl",ja.getJSONObject(i).getString("imgurl"));
+//                Log.i("date_updated",""+ja.getJSONObject(i).getInt("date_updated"));
+//                Log.i("now",""+ja.getJSONObject(i).getInt("now"));
+//                Log.i("time",""+ja.getJSONObject(i).getString("time"));
+//                int no = ja.getJSONObject(i).getInt("no");
+//                String strCon = ja.getJSONObject(i).getString("con");
+//                String strDate = ja.getJSONObject(i).getString("time");
+//                String strImg = ja.getJSONObject(i).getString("imgurl");
+//                NotiCellView ncv  = new NotiCellView(this,strCon,strDate,strImg);
+//                View v = ncv.getView();
+//                v.setTag("noti"+no);
+//                v.setOnClickListener((OnClickListener) this);
+//                llTable.addView(ncv.getView());
+//            }
+//            tvLength.setText(ja_len+"");
+//            if(ja_len!=0){
+//                tvNotiLength.setText(ja.length()+"");
+//                tvNotiLength.setVisibility(View.VISIBLE);
+//            }else{
+//                tvNotiLength.setText(0);
+//                tvNotiLength.setVisibility(View.GONE);
+//            }
+//        }catch (Exception e) {
+//            // TODO: handle exception
+//        }
+//    }
+
+
+
+
+
+------------from DB-------
+
+//    private class DownloadFilesTask extends AsyncTask<URL, Integer, Long> {
+//        protected Long doInBackground(URL... urls) {
+//            int count = urls.length;
+//            long totalSize = 0;
+//            for (int i = 0; i < count; i++) {
+//                totalSize += Downloader.downloadFile(urls[i]);
+//                publishProgress((int) ((i / (float) count) * 100));
+//                // Escape early if cancel() is called
+//                if (isCancelled()) break;
+//            }
+//            return totalSize;
+//        }
+//
+//        protected void onProgressUpdate(Integer... progress) {
+//            setProgressPercent(progress[0]);
+//        }
+//
+//        protected void onPostExecute(Long result) {
+//            showDialog("Downloaded " + result + " bytes");
+//        }
+//    }
+
+    public void getPoster() {
+//        Item it = new Item;
+    }
+
+    public void showProgress() {
+        Paint bar = new Paint(Paint.ANTI_ALIAS_FLAG);
+        Canvas c = null;
+        c.drawLine(0, 0, 10, 0, bar);
+        bar.setColor(0x000000);
+
+    }
