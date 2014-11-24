@@ -1,21 +1,18 @@
 package com.redbomba.arena.adapters.inflaters;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
-import android.util.Log;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import com.androidquery.AQuery;
 import com.redbomba.arena.R;
 import com.redbomba.arena.adapters.BaseInflaterAdapter;
 import com.redbomba.arena.adapters.CardItemData;
 import com.redbomba.arena.adapters.IAdapterViewInflater;
-
-import java.io.InputStream;
 
 /**
  * Created with IntelliJ IDEA.
@@ -72,41 +69,62 @@ public class CardInflater implements IAdapterViewInflater<CardItemData>
 
 		public void updateDisplay(CardItemData item)
 		{
-			m_text1.setText(item.getText1());
-			m_text2.setText(item.getText2());
-			m_text3.setText(item.getText3());
-            new DownloadImageTask(m_bitmap)
-                    .execute(item.getBitmap());
+            AQuery aq = new AQuery(m_rootView);
+            aq.id(R.id.league_name).text(item.getText1());
+            aq.id(R.id.player_level).text(item.getText2());
+            d_dayColor(item.getText3());
+            aq.id(R.id.bitmap).image(item.getBitmap());
             m_bitmap.setScaleType(ImageView.ScaleType.CENTER_CROP);
             m_join.setProgress(item.getJoin());
-            m_joined_user.setText(item.getJoinedUser());
+            m_join.getProgressDrawable().setColorFilter(Color.rgb(0x34,0x98,0xdb), PorterDuff.Mode.SRC_IN);
+            aq.id(R.id.joined_user).text(item.getJoinedUser());
+            aq.id(R.id.joined_user_total).text(item.getJoinedUserTotal());
+//            m_joined_user.setText(item.getJoinedUser());
 		}
-	}
 
-
-    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
-        ImageView bmImage;
-
-        public DownloadImageTask(ImageView bmImage) {
-            this.bmImage = bmImage;
-        }
-
-        protected Bitmap doInBackground(String... urls) {
-            String urldisplay = urls[0];
-            Bitmap mIcon11 = null;
-            try {
-                InputStream in = new java.net.URL(urldisplay).openStream();
-                mIcon11 = BitmapFactory.decodeStream(in);
-            } catch (Exception e) {
-                Log.e("Error", e.getMessage());
-                e.printStackTrace();
+        private void d_dayColor(String[] calcDay) {
+            AQuery aq = new AQuery(m_rootView);
+            if (calcDay[0].equals("OK")) {
+                aq.id(R.id.d_day).background(R.drawable.d_day_shape);
+                m_text3.setText(calcDay[1]);
             }
-            return mIcon11;
+            else {
+                aq.id(R.id.d_day).background(R.drawable.d_day_shape2);
+                m_text3.setText(calcDay[1]);
+            }
         }
+	}
+//
+//
+//    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+//        ImageView bmImage;
+//
+//        public DownloadImageTask(ImageView bmImage) {
+//            this.bmImage = bmImage;
+//        }
+//
+//        @Override
+//        protected void onPreExecute() {
+//            super.onPreExecute();
+//        }
+//
+//        protected Bitmap doInBackground(String... urls) {
+//            String urldisplay = urls[0];
+//            Bitmap mIcon11 = null;
+//            try {
+//                InputStream in = new java.net.URL(urldisplay).openStream();
+//                mIcon11 = BitmapFactory.decodeStream(in);
+//            } catch (Exception e) {
+//                Log.e("Error", e.getMessage());
+//                e.printStackTrace();
+//            }
+//            return mIcon11;
+//        }
+//
+//        protected void onPostExecute(Bitmap result) {
+//            bmImage.setImageBitmap(result);
+//        }
+//    }
 
-        protected void onPostExecute(Bitmap result) {
-            bmImage.setImageBitmap(result);
-        }
-    }
 
 }

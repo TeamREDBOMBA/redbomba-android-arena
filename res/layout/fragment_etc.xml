@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white">
+    <RelativeLayout
+            android:layout_width="match_parent" android:layout_height="100dp"
+            android:layout_gravity="center_vertical">
+        <ImageView
+                android:id="@+id/etc_profile_picture"
+                android:layout_width="60dp" android:layout_height="60dp"
+                android:background="@drawable/user_icon"
+                android:layout_margin="20dp"/>
+        <TextView
+                android:id="@+id/etc_username"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/etc_profile_picture"
+                android:layout_marginTop="26dp"
+                android:textSize="24sp"/>
+        <TextView
+                android:id="@+id/etc_user_email"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/etc_profile_picture"
+                android:layout_below="@id/etc_username"
+                android:textColor="@color/cream_dark"/>
+    </RelativeLayout>
+
+    <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="연결된 게임 계정"
+            android:textColor="@color/cream_dark"
+            android:layout_margin="5dp"/>
+
+    <RelativeLayout
+            android:layout_width="fill_parent" android:layout_height="90dp"
+            android:background="@drawable/etc_stroke">
+
+        <ImageView
+                android:id="@+id/etc_game_bg"
+                android:layout_width="match_parent" android:layout_height="90dp"
+                android:scaleType="centerCrop"/>
+
+        <ImageView
+                android:layout_margin="10dp"
+                android:id="@+id/etc_game_icon"
+                android:layout_width="70dp" android:layout_height="70dp"
+                android:layout_centerVertical="true"/>
+        <TextView
+                android:id="@+id/etc_game_name"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:textStyle="bold"/>
+
+        <TextView
+                android:id="@+id/etc_no_account"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="연결된 게임 계정이 없습니다."
+                android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="내가 소속된 게이밍 그룹"
+            android:textColor="@color/cream_dark"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"/>
+    <TextView
+            android:id="@+id/etc_no_group"
+            android:layout_width="fill_parent" android:layout_height="110dp"
+            android:background="@drawable/etc_stroke"
+            android:text="소속된 그룹이 없습니다."
+            android:gravity="center"
+            />
+    <RelativeLayout
+            android:id="@+id/etc_group_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/etc_stroke"
+            android:visibility="gone">
+
+        <ImageView
+                android:id="@+id/etc_group_icon"
+                android:layout_width="50dp" android:layout_height="50dp"
+                android:layout_margin="10dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="70dp"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/etc_group_icon"
+                android:gravity="center_vertical">
+            <TextView
+                    android:id="@+id/etc_group_name"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textSize="18sp"/>
+            <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+                <TextView
+                        android:id="@+id/etc_group_ini"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/cream_dark"/>
+                <ImageView
+                        android:id="@+id/etc_group_game_icon"
+                        android:layout_width="20dp" android:layout_height="20dp"
+                        android:src="@drawable/lol_icon_bw"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
+                <TextView
+                        android:id="@+id/etc_group_game"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="fill_parent" android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/etc_group_icon"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp">
+            <LinearLayout
+                    android:layout_width="70dp" android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                <ImageView
+                        android:id="@+id/etc_ic_person"
+                        android:layout_width="30dp" android:layout_height="30dp"
+                        android:layout_below="@id/etc_group_icon"
+                        android:src="@drawable/ic_person"/>
+                <TextView
+                        android:id="@+id/etc_group_mem"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <Button
+                    android:id="@+id/etc_execute_redbomba"
+                    android:layout_width="fill_parent" android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/btn_red"
+                    android:textColor="@android:color/white"
+                    android:text="게이밍 그룹 홈으로 이동"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="로그아웃하기"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_white"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"/>
+
+    <TextView
+            android:id="@+id/terms_and_conditions"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/cream_dark"
+            android:text="이용약관 및 세부사항"/>
+
+</LinearLayout>

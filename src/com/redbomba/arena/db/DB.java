@@ -3,6 +3,7 @@ package com.redbomba.arena.db;
 import android.os.StrictMode;
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -56,8 +57,8 @@ public class DB {
         return 0;
     }
 
-    public static String d_day(int index) {
-        String result = null;
+    public static long d_day(int index) {
+        long result = 0;
         String start_apply = get_league_info(index, "start_apply");
         Date currentTime = new Date();
 
@@ -70,6 +71,7 @@ public class DB {
 
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ssZ");
         Date convertedDate = null;
+        //change format
         try {
             convertedDate = df.parse(start_apply);
         } catch (ParseException e) {
@@ -77,13 +79,18 @@ public class DB {
         }
         long dday = convertedDate.getTime() - currentTime.getTime();
         long aday = (60*60*24*1000);
-        dday = -(dday / aday);
+        long hour = (3600000);
+        dday = (dday / aday);
+        long dhour = (dday/hour);
 
         if (dday > 0) {
-            result = "D+" + Long.toString(dday);
+            result = dday;
         }
+//        else if (dday == 0) {
+//            result = dhour;
+//        }
         else {
-            result = "D" + Long.toString(dday);
+            result = dday;
         }
         return result;
     }
@@ -151,4 +158,35 @@ public class DB {
         }
         return name+" is not an object of the JSONArray";
     }
+
+    public static String getJsonObj_fromArray(String jsonArray, int i) {
+        try {
+            JSONArray ja = new JSONArray(jsonArray);
+            return ja.getJSONObject(i).toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return "This is not an object of the JSONArray";
+    }
+
+    public static String getValue_fromObject(String jo, String name) {
+        try {
+            JSONObject ja = new JSONObject(jo);
+            return ja.getString(name);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return name+" is not an object of the JSONArray";
+    }
+
+    public static int getJsonLength(String jsonArray) {
+        try{
+            JSONArray ja = new JSONArray(jsonArray);
+//            System.out.println("-=-=-=!"+jsonArray);
+            return ja.length();
+        } catch (JSONException e) {
+            return 0;
+        }
+    }
+
 }

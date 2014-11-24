@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <!--<TextView-->
+            <!--android:id="@+id/time_hour"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="1"-->
+            <!--android:textSize="16sp"-->
+            <!--android:background="@drawable/padding_all_grey"/>-->
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:id="@+id/step2_date"
+              android:gravity="center"
+              android:textStyle="bold"
+              android:textSize="16sp"
+              android:padding="10dp"
+              android:textColor="@color/white"
+              android:background="@drawable/bg_radius_rect_carrot"
+              android:layout_margin="1dp"/>
+
+</FrameLayout>

@@ -3,7 +3,8 @@
     <item>
         <shape xmlns:android="http://schemas.android.com/apk/res/android"
                      android:shape="oval">
-            <solid android:color="#2ecc71"/>
+            <solid android:id="@+id/testshape2"
+                   android:color="#2ecc71"/>
         </shape>
     </item>
     <item    android:left="7dp"
@@ -12,7 +13,9 @@
              android:bottom="7dp">
         <shape xmlns:android="http://schemas.android.com/apk/res/android"
                android:shape="oval">
-            <solid android:color="#27ae60"/>
+            <solid android:color="#27ae60"
+                   android:id="@+id/testshape1"
+                    />
         </shape>
     </item>
 

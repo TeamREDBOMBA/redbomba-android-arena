@@ -7,12 +7,13 @@ public class CardItemData
 {
 	private String m_text1;
 	private String m_text2;
-	private String m_text3;
+	private String[] m_text3;
     private String m_bitmap;
     private int m_join;
     private String m_joined_user;
+    private String m_joined_user_total;
 
-	public CardItemData(String text1, String text2, String text3, String bitmap, int join, String joined_user)
+	public CardItemData(String text1, String text2, String[] text3, String bitmap, int join, String joined_user, String joined_user_total)
 	{
 		m_text1 = text1;
 		m_text2 = text2;
@@ -20,6 +21,7 @@ public class CardItemData
         m_bitmap = bitmap;
         m_join = join;
         m_joined_user = joined_user;
+        m_joined_user_total = joined_user_total;
 	}
 
 	public String getText1()
@@ -32,7 +34,7 @@ public class CardItemData
 		return m_text2;
 	}
 
-	public String getText3()
+	public String[] getText3()
 	{
 		return m_text3;
 	}
@@ -42,4 +44,6 @@ public class CardItemData
     public int getJoin() { return m_join; }
 
     public String getJoinedUser() { return m_joined_user; }
+
+    public String getJoinedUserTotal() { return m_joined_user_total; }
 }

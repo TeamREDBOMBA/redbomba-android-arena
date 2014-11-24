@@ -3,105 +3,129 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:descendantFocusability="beforeDescendants">
 
     <RelativeLayout
             android:id="@+id/ticket"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@drawable/ticket_layout2"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="20dp"
             android:descendantFocusability="afterDescendants">
 
-        <com.redbomba.arena.customview.VerticalTextView
-                android:layout_width="30dp"
-                android:layout_height="fill_parent"
-                android:background="@drawable/ticket_layout"
-                android:id="@+id/ticket_left"
-                android:text="신청완료"
-                android:textSize="18sp"
-                android:gravity="center"
-                android:textColor="@android:color/white"/>
+        <LinearLayout
+                android:id="@+id/ticket_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="30dp">
 
-        <!--<LinearLayout-->
-                <!--android:id="@+id/ticket_top"-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_toRightOf="@+id/textView">-->
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@color/cream">
+
+                <TextView
+                        android:id="@+id/ticket_league_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="35dp"/>
+
+                <TextView
+                        android:id="@+id/next_match"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:background="@drawable/bg_radius_rect_carrot"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/ticket_state"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:background="@android:color/white"
+                    android:text="일정 발표 전"/>
+
+            <LinearLayout
+                    android:paddingLeft="10dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/padding_top_line">
+
+                <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/calendar"
+                        android:layout_margin="5dp"/>
+
+                <TextView
+                        android:id="@+id/match_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:paddingLeft="10dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/ticket_padding_top_last">
+
+                <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#bdbdbd"
+                        android:gravity="center"
+                        android:text="VS"/>
+
+                <ImageView
+                        android:id="@+id/opgroup_icon"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:background="@drawable/user_icon"/>
+
+                <TextView
+                        android:id="@+id/opgroup_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+                android:id="@+id/ticket_user_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ticket_layout"/>
 
 
-
-        <!--</LinearLayout>-->
-
-        <!--<LinearLayout android:id="@+id/ticket_bottom"-->
-                      <!--android:orientation="vertical"-->
-                      <!--android:layout_width="match_parent"-->
-                      <!--android:layout_height="match_parent"-->
-                      <!--android:layout_below="@+id/ticket_top"-->
-                      <!--android:layout_toRightOf="@+id/textView"-->
-                      <!--android:background="#d7ccc8"-->
-                      <!-->-->
-
-
-        <!--</LinearLayout>-->
-        <!--<GridLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_alignParentLeft="true" android:layout_alignParentStart="true"-->
-                <!--android:layout_toRightOf="@+id/ticket_left"-->
-                <!--android:columnCount="2"-->
-                <!--android:rowCount="3"-->
-                <!--android:layout_marginLeft="30dp"-->
-                <!--android:background="#d7ccc8" android:layout_alignParentBottom="true">-->
-
-            <TextView android:id="@+id/ticket_league_name"
-                      android:layout_width="match_parent"
-                      android:layout_height="40dp"
-                      android:layout_alignParentTop="true"
-                      android:textSize="16sp"
-                      android:gravity="center"
-                      android:layout_toRightOf="@id/ticket_left"
-                      android:background="@android:color/white"
-                      android:layout_toLeftOf="@+id/next_round_text"/>
-
-            <TextView android:id="@+id/next_round_text"
-                      android:layout_width="120dp"
-                      android:layout_height="40dp"
-                      android:textSize="16sp"
-                      android:text="다음 라운드"
-                      android:gravity="center"
-                      android:background="@drawable/right_top"
-                      android:layout_alignParentTop="true" android:layout_alignParentRight="true"
-                      android:layout_alignParentEnd="true"/>
-
-
-            <TextView android:id="@+id/ticket_team_name"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_centerVertical="true"
-                      android:textSize="16sp"
-                      android:layout_below="@+id/ticket_league_name"
-                      android:layout_toRightOf="@+id/ticket_left"
-                    />
-
-            <TextView android:layout_width="120dp"
-                      android:layout_height="wrap_content"
-                      android:text="일정 정보"
-                      android:layout_alignTop="@+id/ticket_team_name"
-                      android:gravity="top"
-                      android:layout_alignParentRight="true"
-                      android:layout_alignParentEnd="true"/>
-
-            <TextView android:id="@+id/ticket_round"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_alignParentBottom="true"
-                      android:layout_toRightOf="@+id/ticket_left"
-                    />
-
-        <!--</GridLayout>-->
+        <TextView
+                android:id="@+id/ticket_team_name"
+                android:layout_below="@+id/ticket_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="12sp"
+                android:text="레드밤바팀"/>
 
     </RelativeLayout>
 </FrameLayout>

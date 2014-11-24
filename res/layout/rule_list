@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/logout_button"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+    <LinearLayout android:id="@+id/rule_head"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+        <TextView android:id="@+id/rule_title"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center_vertical"/>
+        <ImageView android:id="@+id/rule_expander"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_down"/>
+    </LinearLayout>
+    <TextView android:id="@+id/rule_contents"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+
+</LinearLayout>

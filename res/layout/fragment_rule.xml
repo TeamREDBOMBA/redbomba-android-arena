@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/ll_fragment"
+                  android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/cream">
+    <ScrollView
+            android:id="@+id/rules"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+        <LinearLayout
+                android:id="@+id/contentsLayout"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                >
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<ListView android:id="@+id/rules"-->
+                      <!--android:layout_width="fill_parent"-->
+                      <!--android:layout_height="fill_parent"-->
+                      <!--android:divider="@null"-->
+                      <!--android:dividerHeight="10dp"-->
+                      <!--android:listSelector="@android:color/transparent"-->
+                      <!--android:cacheColorHint="@android:color/transparent"-->
+                      <!--android:headerDividersEnabled="true"-->
+                      <!--android:footerDividersEnabled="true">-->
+
+            <!--</ListView>-->
+            <!--<TextView android:id="@+id/detail_rule"-->
+                      <!--android:layout_width="fill_parent"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:layout_marginTop="15dp"-->
+                      <!--android:layout_marginLeft="15dp"-->
+                      <!--android:layout_marginRight="15dp"-->
+                      <!--android:background="@drawable/detail_container_top_bottom"/>-->
+
+            <!--<TextView android:id="@+id/detail_rule2"-->
+                      <!--android:layout_marginTop="5dp"-->
+                      <!--android:layout_marginLeft="15dp"-->
+                      <!--android:layout_marginRight="15dp"-->
+                      <!--android:layout_width="fill_parent"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:background="@drawable/detail_container_top_bottom"/>-->
+
+            <!--<TextView android:id="@+id/detail_rule3"-->
+                      <!--android:layout_marginTop="5dp"-->
+                      <!--android:layout_marginLeft="15dp"-->
+                      <!--android:layout_marginRight="15dp"-->
+                      <!--android:layout_width="fill_parent"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:background="@drawable/detail_container_top_bottom"/>-->
+
+
+    </LinearLayout>

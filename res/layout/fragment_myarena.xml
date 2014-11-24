@@ -8,11 +8,32 @@
               android:background="@color/cream"
         >
 
+    <LinearLayout
+            android:id="@+id/check_ticket_exist"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0"
+            android:visibility="gone">
+
+        <ImageView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/ic_no_ticket"/>
+
+        <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="참여중인 대회가 없습니다."/>
+    </LinearLayout>
+
     <ListView android:id="@+id/ticket_list"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
+              android:layout_weight="1"
               android:divider="@null"
               android:dividerHeight="10dp"
+              android:layout_gravity="center"
               android:listSelector="@android:color/transparent"
               android:cacheColorHint="@android:color/transparent"
               android:headerDividersEnabled="true"

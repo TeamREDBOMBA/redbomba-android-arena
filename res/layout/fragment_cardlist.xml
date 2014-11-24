@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/ll_fragment"
               android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:background="@color/cream"
-        >
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/cream">
 
     <ListView android:id="@+id/arena_cardlist"
               android:layout_width="fill_parent"

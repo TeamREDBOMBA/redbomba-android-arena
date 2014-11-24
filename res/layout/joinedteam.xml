@@ -1,0 +1,61 @@
+
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/joined_team_poster"
+                android:layout_width="fill_parent" android:layout_height="100dp"/>
+        <TextView android:id="@+id/joinedteam_league_name"
+                android:layout_width="fill_parent" android:layout_height="100dp"
+                android:background="#70000000"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"/>
+    </RelativeLayout>
+
+    <TextView android:layout_width="fill_parent" android:layout_height="50dp"
+              android:textSize="20sp"
+            android:text="참가팀 현황"
+            android:textColor="@color/white"
+            android:background="#c0392b"
+            android:gravity="center"/>
+
+    <!--<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"-->
+            <!--android:layout_weight="1">-->
+    <!--<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"-->
+            <!--android:layout_weight="1">-->
+        <!---->
+    <!--</ScrollView>-->
+        <LinearLayout
+                android:id="@+id/testView"
+                android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:background="@color/cream"
+                android:padding="10dp"
+                android:baselineAligned="false">
+            <ListView
+                    android:id="@+id/team_list_even"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:divider="@null"
+                    android:listSelector="@android:color/transparent"
+                    android:cacheColorHint="@android:color/transparent">
+
+            </ListView>
+
+            <ListView android:id="@+id/team_list_odd"
+                      android:layout_width="0dp"
+                      android:layout_height="fill_parent"
+                      android:layout_weight="1"
+                      android:divider="@null"
+                      android:listSelector="@android:color/transparent"
+                      android:cacheColorHint="@android:color/transparent">
+
+            </ListView>
+        </LinearLayout>
+    <!--</ScrollView>-->
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/feed_in_comment"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="1dp"
+                  android:background="@drawable/padding_bottom_grey">
+
+    </LinearLayout>
+
+    <ListView
+            android:id="@+id/feed_comment_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="16sp"/>
+    <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <EditText
+                android:id="@+id/comment_con"
+                android:layout_width="0dp" android:layout_height="50dp"
+                android:layout_weight="1" android:inputType="textMultiLine"
+                android:layout_gravity="center_vertical"
+                android:hint="@string/hint_comment"
+                android:background="@drawable/padding_all_grey"
+                android:maxHeight="160dp"
+                android:paddingLeft="5dp"/>
+        <ImageButton android:id="@+id/comment_confirm"
+                android:layout_width="50dp" android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/btn_red_rect"
+                android:src="@drawable/ic_action_write"/>
+
+    </LinearLayout>
+
+</LinearLayout>

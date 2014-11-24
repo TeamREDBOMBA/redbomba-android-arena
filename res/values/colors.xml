@@ -22,4 +22,32 @@
     <color name="slate">#ff76a9b5</color>
     <color name="cream">#efebe9</color>
     <color name="cream_dark">#d7ccc8</color>
+    <color name="cloud">#ecf0f1</color>
+    <color name="flatui_silver">#bdc3c7</color>
+    <color name="red_alrizarin">#e74f40</color>
+
+    <!-- General -->
+    <color name="alert_circle">#CC0000</color>
+    <color name="confirm_circle">#669900</color>
+    <color name="info_cirle">#33b5e5</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="black">#3b4144</color>
+    <color name="calendarBackgroundColor">#FFFFFF</color>
+
+    <!-- Fonts -->
+    <color name="monthTitleColor">#161d20</color>
+    <color name="dayOfWeekColor">#161d20</color>
+    <color name="dayOfMonthColor">#808080</color>
+    <color name="currentDayOfMonthColor">#33b5e5</color>
+    <color name="currentDayOfMonthSelectorColor">#33b5e5</color>
+
+    <!-- Actionbar -->
+    <color name="actionbarColor">#e85344</color>
+    <color name="actionbar_text">#ecf0f1</color>
+
+    <!-- caldroid -->
+    <color name="green">#8FCC85</color>
+    <color name="blue">#ff33b5e5</color>
+    <color name="white">#ffffff</color>
+    <color name="carrot">#ff5722</color>
 </resources>

@@ -3,28 +3,94 @@
           package="com.redbomba.arena"
           android:versionCode="1"
           android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19"/>
+    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="19"/>
     <uses-permission android:name="android.permission.INTERNET" />
-    <application android:label="@string/app_name"
-                 android:icon="@drawable/redbomba"
-                 android:theme="@android:style/Theme.Holo.Light">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
-        <activity android:name=".LoginActivity"
-                  android:label="@string/app_name">
+    <application
+            android:name="com.redbomba.arena.Settings"
+            android:label="@string/app_name"
+                 android:icon="@drawable/ic_launcher"
+                 android:theme="@style/StyledIndicators">
+
+        <!--<activity android:name=".LoginActivity"-->
+                  <!--android:label="@string/app_name">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <activity android:name=".main.MainActivity"
+                  >
+
+        </activity>
+
+        <activity android:name=".carddetail.CardDetailActivity">
+
+        </activity>
+
+        <activity android:name=".NoInternetActivity">
+
+        </activity>
+
+        <activity android:name=".carddetail.JoinedTeamActivity">
+
+        </activity>
+
+        <activity android:name=".carddetail.RuleFAQActivity">
+
+        </activity>
+
+        <activity android:name=".carddetail.feeds.FeedActivity">
+
+        </activity>
+
+        <activity android:name=".carddetail.feeds.WriteFeedActivity">
+
+        </activity>
+
+        <activity android:name=".carddetail.feeds.FeedCommentsActivity">
+
+        </activity>
+
+        <activity android:name=".carddetail.ApplyLeagueActivity">
+
+        </activity>
+
+        <activity android:name=".carddetail.AgreementLeagueActivity">
+
+        </activity>
+
+        <activity android:name=".references.CaldroidSampleActivity">
+
+        </activity>
+
+        <activity android:name=".TnCActivity">
+
+        </activity>
+
+        <activity android:name=".carddetail.ApplyTimeActivity">
+
+        </activity>
+
+        <activity
+                android:name=".login.LandingActivity"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <activity
+                android:name=".login.LoadingActivity"
+                android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity android:name="MainActivity"
-                  android:label="@string/app_name">
-
-        </activity>
-
-        <activity android:name=".CardDetailActivity"
-                  android:label="@string/app_name">
-
         </activity>
     </application>
 </manifest>

@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">My Arena</string>
+    <string name="app_name">레드밤바\n아레나</string>
     <string name="join_league">참가 신청</string>
     <string name="login">로그인</string>
+
+    <string name="monthTitleFont">roboto_light</string>
+    <string name="dayOfWeekFont">roboto_regular</string>
+    <string name="dayOfMonthFont">roboto_light</string>
+    <string name="currentDayOfMonthFont">roboto_light</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="hint_message">메세지를 입력하세요.</string>
+    <string name="hint_comment">댓글을 입력하세요.</string>
+
+    <!-- caldroid -->
+    <string name="customize">Customize</string>
+    <string name="show_dialog">Show Dialog</string>
+    <string name="undo">Undo</string>
 
 </resources>
