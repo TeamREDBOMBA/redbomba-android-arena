@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Modules/android-calendar-card-master/calendar-card/calendar-card.iml" filepath="$PROJECT_DIR$/../Modules/android-calendar-card-master/calendar-card/calendar-card.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Modules/Android-ViewPagerIndicator-master/library/library.iml" filepath="$PROJECT_DIR$/../Modules/Android-ViewPagerIndicator-master/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Modules/Caldroid-eclipse_project/library/library1.iml" filepath="$PROJECT_DIR$/../Modules/Caldroid-eclipse_project/library/library1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redbomba-android-arena.iml" filepath="$PROJECT_DIR$/redbomba-android-arena.iml" />
+    </modules>
+  </component>
+</project>
